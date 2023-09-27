@@ -30,7 +30,7 @@
 					"source.organizeImports": true
 				},
 				"python.languageServer": "Pylance",
-				"python.defaultInterpreterPath": "[[CHANGE_ME]] `pipenv run which python`",
+				"python.defaultInterpreterPath": "/home/vscode/.local/share/virtualenvs/django-backend-TeM3V_kq/bin/python",
 				"python.analysis.autoImportCompletions": true,
 				"python.analysis.inlayHints.functionReturnTypes": false,
 				"python.analysis.inlayHints.variableTypes": true, 

@@ -1,5 +1,6 @@
-# Start the postgres server
+# Start database servers
 pg_ctl start -l .out/postgres.out
+sudo service redis-server start
 
 # Install Python Dependencies
 pipenv install

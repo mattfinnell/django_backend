@@ -42,8 +42,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # REST API
     "rest_framework",
     "api",
+    # Redis Queue and Job Runner
+    "django_rq",
+    "jobs",
 ]
 
 MIDDLEWARE = [
@@ -88,6 +92,15 @@ DATABASES = {
         "PASSWORD": os.getenv("POSTGRES_DATABASE_PASSWORD"),
         "HOST": os.getenv("POSTGRES_DATABASE_HOST"),
         "PORT": os.getenv("POSTGRES_DATABASE_PORT"),
+    },
+}
+
+RQ_QUEUES = {
+    "default": {
+        "HOST": os.getenv("REDIS_DATABASE_HOST"),
+        "PORT": os.getenv("REDIS_DATABASE_PORT"),
+        "DB": os.getenv("REDIS_DATABASE_DB_ID"),
+        "DEFAULT_TIMEOUT": 360,
     },
 }
 

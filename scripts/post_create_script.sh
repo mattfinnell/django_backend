@@ -7,6 +7,8 @@ sudo install postgresql postgresql-contrib psql
 pg_ctl start -l .out/postgres.out
 psql -U postgres -f scripts/postgres.init.sql
 
+sudo apt install redis-server -y
+
 pipenv install
 pipenv run python manage.py createsuperuser --email admin@example.com --username admin
 
